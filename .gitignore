@@ -1,0 +1,54 @@
+# ================================
+# DevAgent — .gitignore
+# ================================
+
+# Environment — NEVER push real keys!
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# ChromaDB — local vector store
+chroma_db/
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+
+# Vite
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docker
+.docker/

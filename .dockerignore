@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+chroma_db/
+
+# Node
+node_modules/
+dist/
+.next/
+build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Git
+.git/
+.gitignore
+
+# Misc
+*.md
+.DS_Store
+Thumbs.db
