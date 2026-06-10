@@ -14,7 +14,8 @@
 ---
 
 ## 🚀 Live Demo
-👉 **[devagent.onrender.com](https://devagent.onrender.com)** ← coming soon
+👉 **[devagent.onrender.com](https://devagent-frontend.onrender.com
+)** ← coming soon
 
 ---
 
