@@ -6,7 +6,7 @@ load_dotenv()
 
 # ─────────────────────────────────────────
 # Groq LLM Setup
-# Fast & Free — using llama-3.3-70b model
+# Updated models — Sept 2026
 # ─────────────────────────────────────────
 
 def get_llm(temperature: float = 0.3):
@@ -21,7 +21,7 @@ def get_llm(temperature: float = 0.3):
 
     llm = ChatGroq(
         api_key=api_key,
-        model="llama-3.3-70b-versatile",  # best free model on Groq
+        model="openai/gpt-oss-120b",  # replaces llama-3.3-70b-versatile
         temperature=temperature,
         max_tokens=2048,
     )
@@ -38,7 +38,7 @@ def get_fast_llm():
 
     llm = ChatGroq(
         api_key=api_key,
-        model="llama-3.1-8b-instant",  # fast model for scoring
+        model="openai/gpt-oss-20b",  # replaces llama-3.1-8b-instant
         temperature=0.1,
         max_tokens=1024,
     )
