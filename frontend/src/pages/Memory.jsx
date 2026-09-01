@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { MemorySkeleton } from '../components/Skeleton'
 
 // ─────────────────────────────────────────
 // Memory Page — ChromaDB Session History
@@ -250,12 +251,7 @@ export default function Memory() {
         )}
 
         {/* Loading */}
-        {loading && (
-          <div className="card text-center py-12 space-y-3">
-            <div className="text-4xl animate-spin">⚙️</div>
-            <p className="text-gray-400">Loading sessions from ChromaDB...</p>
-          </div>
-        )}
+        {loading && <MemorySkeleton />}
 
         {/* Error */}
         {error && (

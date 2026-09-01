@@ -168,7 +168,7 @@ ${results.evaluation}
           { icon: '🔑', label: 'Session',   value: results.session_id      },
           { icon: '📁', label: 'Repo',      value: results.repo_name       },
           { icon: '🔄', label: 'Iteration', value: `#${results.iteration}` },
-          { icon: '🤖', label: 'Model',     value: 'llama-3.3-70b'         },
+          { icon: '🤖', label: 'Model',     value: 'gpt-oss-120b'         },
           { icon: '⚡', label: 'Engine',    value: 'Groq + LangGraph'      },
         ].map((item) => (
           <div key={item.label} className="flex items-center gap-2">

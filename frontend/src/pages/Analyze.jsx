@@ -123,11 +123,30 @@ export default function Analyze({ setResults }) {
 
         {/* Error */}
         {error && (
-          <div className="bg-red-500/10 border border-red-500/20 rounded-lg
-                          px-4 py-3 text-red-400 text-sm animate-fade-in">
-            {error}
-          </div>
+          <div className="bg-red-500/10 border border-red-500/20 rounded-xl
+                          px-4 py-4 animate-fade-in space-y-2">
+            <div className="flex items-center gap-2 text-red-400 font-semibold text-sm">
+              <span>❌</span>
+              <span>Analysis Failed</span>
+            </div>
+            <p className="text-red-300 text-sm">{error}</p>
+            {error.includes('rate limit') && (
+              <p className="text-yellow-400 text-xs">
+                ⏳ Tip: Wait 30 seconds and try again, or try a smaller repo.
+              </p>
+            )}
+            {error.includes('too large') && (
+              <p className="text-yellow-400 text-xs">
+                📦 Tip: Try repos with fewer than 10 files for best results.
+              </p>
+            )}
+            {error.includes('not found') && (
+              <p className="text-yellow-400 text-xs">
+                🔍 Tip: Make sure the repo is public and the URL is correct.
+              </p>
         )}
+          </div>
+)}
 
         {/* Example repos */}
         <div className="space-y-2">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { DashboardSkeleton } from '../components/Skeleton'
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, BarChart, Bar,
@@ -234,9 +235,7 @@ export default function Dashboard() {
         </div>
 
         {loading ? (
-          <div className="text-center py-8 text-gray-500 animate-pulse">
-            Loading sessions...
-          </div>
+          <DashboardSkeleton />
         ) : recentSessions.length === 0 ? (
           <div className="text-center py-12 space-y-3">
             <div className="text-4xl">📭</div>

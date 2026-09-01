@@ -81,18 +81,19 @@ export default function Navbar() {
       </div>
 
       {/* Mobile nav */}
-      <div className="md:hidden flex items-center gap-1 px-4 pb-3 overflow-x-auto">
+      <div className="md:hidden flex items-center gap-1 px-4 pb-3 overflow-x-auto
+                      scrollbar-none border-t border-border/50 pt-2">
         {navLinks.map((link) => {
           const isActive = location.pathname === link.path
           return (
             <Link
               key={link.path}
               to={link.path}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs
                           font-medium whitespace-nowrap transition-all duration-200
                           ${isActive
                             ? 'bg-primary/20 text-primary'
-                            : 'text-gray-400 hover:text-white'
+                            : 'text-gray-400 hover:text-white hover:bg-white/5'
                           }`}
             >
               <span>{link.icon}</span>
